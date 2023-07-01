@@ -5,9 +5,9 @@ document.addEventListener("DOMContentLoaded", function() {
   const modalCaption = document.getElementById("modal-caption");
   const modalText = document.getElementById("modal-text");
   const closeButton = document.getElementsByClassName("close")[0];
-  let currentPhotoIndex = 0; // Track the index of the currently displayed photo
+  let currentPhotoIndex = 0; 
 
-  // Function to open the modal pop-up
+
   function openModal(index) {
     const photo = photos[index];
     const imgSrc = photo.querySelector("img").src;
@@ -19,35 +19,35 @@ document.addEventListener("DOMContentLoaded", function() {
     modalText.innerHTML = formatModalText(text);
     modal.style.display = "block";
 
-    currentPhotoIndex = index; // Update the current photo index
+    currentPhotoIndex = index; 
   }
 
-  // Function to close the modal pop-up
+  
   function closeModal() {
     modal.style.display = "none";
   }
 
-  // Function to handle key events
+  
   function handleKeyPress(event) {
     if (event.key === "ArrowLeft") {
-      // Navigate to the previous photo
+      
       if (currentPhotoIndex > 0) {
         currentPhotoIndex--;
         openModal(currentPhotoIndex);
       }
     } else if (event.key === "ArrowRight") {
-      // Navigate to the next photo
+      
       if (currentPhotoIndex < photos.length - 1) {
         currentPhotoIndex++;
         openModal(currentPhotoIndex);
       }
     } else if (event.key === "Escape") {
-      // Close the modal when the Escape key is pressed
+      
       closeModal();
     }
   }
 
-  // Attach the key event listener to the document
+  
   document.addEventListener("keydown", handleKeyPress);
 
   photos.forEach(function(photo, index) {
@@ -66,7 +66,7 @@ document.addEventListener("DOMContentLoaded", function() {
     }
   });
 
-  // Function to format the modal text with alternating line colors
+  
   function formatModalText(text) {
     const lines = text.split("\n");
     let formattedText = "";
