@@ -83,14 +83,14 @@
     cursor: pointer;
     position: relative;
     overflow: hidden;
-    width: calc(100% - 11.25rem); /* Adjust to account for sidebar width */
+    width: calc(100% - 11.25rem); 
     display: flex;
     justify-content: center;
     align-items: center;
   }
   
   .photo img {
-    width: 70%;
+    width: 40%;
     height: auto;
     display: block;
     border: 1px solid white;
