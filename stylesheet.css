@@ -159,6 +159,7 @@ body {
     overflow-y: auto;
     max-height: 500px;
     padding: 50px;
+    position: relative;
   }
   .sidebar #weather-box {
     border: 1px solid black;
@@ -198,7 +199,7 @@ body {
     font-weight: bold;
   }
   #modal-text p.alternate-line {
-    color: red; /* Change the color to your desired color */
+    color: red; 
   }
   #modal-text .text-box {
     margin-bottom: 10px;
@@ -208,7 +209,21 @@ body {
     width: 100%;
     padding: 5px;
   }
+  #modal-second-text {
+    color: #fff;
+    margin: .625rem;
+    border: .125rem solid rgb(255, 0, 0);
+    font-family: 'Courier New', Courier, monospace;
+    white-space: pre-wrap;
+    overflow-y: auto;
+    max-height: 500px;
+    padding: 50px;
+    text-align: center;
+  }
+
   
   
   
 }
+
+

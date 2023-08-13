@@ -4,51 +4,49 @@ document.addEventListener("DOMContentLoaded", function() {
   const modalImage = document.getElementById("modal-image");
   const modalCaption = document.getElementById("modal-caption");
   const modalText = document.getElementById("modal-text");
+  const modalSecondText = document.getElementById("modal-second-text");
   const closeButton = document.getElementsByClassName("close")[0];
-  let currentPhotoIndex = 0; 
-
+  let currentPhotoIndex = 0;
 
   function openModal(index) {
     const photo = photos[index];
     const imgSrc = photo.querySelector("img").src;
     const caption = photo.querySelector(".caption").innerHTML;
     const text = photo.dataset.text;
+    const secondText = photo.dataset.secondText; 
+    
 
     modalImage.src = imgSrc;
     modalCaption.innerHTML = caption;
     modalText.innerHTML = formatModalText(text);
+    modalSecondText.innerHTML = formatModalText(secondText); 
     modal.style.display = "block";
 
-    currentPhotoIndex = index; 
+    currentPhotoIndex = index;
   }
 
-  
   function closeModal() {
     modal.style.display = "none";
   }
 
-  
   function handleKeyPress(event) {
     if (event.key === "ArrowLeft") {
-      
       if (currentPhotoIndex > 0) {
         currentPhotoIndex--;
         openModal(currentPhotoIndex);
       }
     } else if (event.key === "ArrowRight") {
-      
       if (currentPhotoIndex < photos.length - 1) {
         currentPhotoIndex++;
         openModal(currentPhotoIndex);
       }
     } else if (event.key === "Escape") {
-      
       closeModal();
     }
   }
 
-  
-  document.addEventListener("keydown", handleKeyPress);
+   document.addEventListener("keydown", handleKeyPress);
+
 
   photos.forEach(function(photo, index) {
     photo.addEventListener("click", function() {
@@ -66,7 +64,6 @@ document.addEventListener("DOMContentLoaded", function() {
     }
   });
 
-  
   function formatModalText(text) {
     const lines = text.split("\n");
     let formattedText = "";
