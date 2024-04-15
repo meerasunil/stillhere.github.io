@@ -3,7 +3,7 @@
   src: url('PressStart2P-Regular.ttf') format('truetype');
 }
 
-@media only screen and (min-width: 600px) {
+@media only screen and (min-width: 900px) {
 body {
     margin: 0;
     padding: 0;
@@ -285,6 +285,9 @@ body {
       display: flex;
       flex-direction: column;
       margin-top: 300px;
+      justify-content: center;
+
+    
     }
   
     .photo {
