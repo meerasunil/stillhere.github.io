@@ -2,11 +2,7 @@
     font-family: 'Press Start 2P';
     src: url('PressStart2P-Regular.ttf') format('truetype');
   }
-@media only screen and (max-width: 600px),
-       only screen and (min-width: 601px) and (max-width: 768px),
-       only screen and (min-width: 769px) and (max-width: 992px),
-       only screen and (min-width: 993px) and (max-width: 1200px),
-       only screen and (min-width: 1201px) {
+
     
   body {
     margin: 0;
@@ -164,4 +160,3 @@
   .sidebar #weather-box .time {
     font-size: 18px;
   }
-}
